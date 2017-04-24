@@ -18,8 +18,9 @@ namespace XamarinMvpSample.iOS
 
 		public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
 		{
-			// Override point for customization after application launch.
-			// If not required for your application you can safely delete this method
+			Window = new UIWindow();
+			Window.RootViewController = new UINavigationController(new LoginViewController());
+			Window.MakeKeyAndVisible();
 
 			return true;
 		}
